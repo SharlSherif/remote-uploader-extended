@@ -7,7 +7,7 @@ upload_success = metadata_db.upload_success
 
 class Video(abc.ABC):
     def getAll():
-        return (list(videos.upload_success.find({})))
+        return (list(upload_success.find({})))
 
     def insertOne(vid):
-        return videos.upload_queue.insert(vid)
+        return upload_queue.insert(vid)
