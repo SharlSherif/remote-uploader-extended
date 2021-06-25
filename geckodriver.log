@@ -2953,3 +2953,57 @@ Marionette threw an error: <unprintable error>
 [GFX1-]: Failed buffer for 1, 2, 1286, 1773
 [GFX1-]: Failed buffer for 1, 2, 1286, 1773
 [GFX1-]: Failed buffer for 1, 2, 1286, 1773
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1624647905604	Marionette	INFO	Stopped listening on port 60315
+irefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileSho2mO"
+*** You are running in headless mode.
+1624644572842	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1624644573992	Marionette	INFO	Listening on port 51220
+1624644574023	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+[Child 29436, MediaDecoderStateMachine #1] WARNING: Decoder=18dcde67400 Decode error: NS_ERROR_OUT_OF_MEMORY (0x8007000e): file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp:3478
+[Child 29436, MediaDecoderStateMachine #1] WARNING: Decoder=18dcde6a000 Decode error: NS_ERROR_OUT_OF_MEMORY (0x8007000e): file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp:3478
+[Child 29436, MediaDecoderStateMachine #1] WARNING: Decoder=18dcc70f000 Decode error: NS_ERROR_OUT_OF_MEMORY (0x8007000e): file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp:3478
+[Child 29436, MediaDecoderStateMachine #1] WARNING: Decoder=18dcc70c800 Decode error: NS_ERROR_OUT_OF_MEMORY (0x8007000e): file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp:3478
+Exiting due to channel error.
+Exiting due to channel error.
+/@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1624647910795	Marionette	INFO	Stopped listening on port 55533
+irefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileZHkuyE"
+*** You are running in headless mode.
+1624647442282	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1624647443362	Marionette	INFO	Listening on port 54941
+1624647443490	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+[Child 14184, MediaDecoderStateMachine #1] WARNING: Decoder=2367fcdf000 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005): file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp:3478
+[Child 14184, MediaDecoderStateMachine #1] WARNING: Decoder=2360785c400 Decode error: NS_ERROR_OUT_OF_MEMORY (0x8007000e): file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp:3478
+1624650754609	geckodriver	INFO	Listening on 127.0.0.1:64921
+1624650758004	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofile7xzjml"
+*** You are running in headless mode.
+1624650758307	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1624650759144	Marionette	INFO	Listening on port 64936
+1624650759544	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0xD,name=PAPZ::Msg_Destroy) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1624652117634	Marionette	INFO	Stopped listening on port 64936

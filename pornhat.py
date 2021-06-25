@@ -391,10 +391,10 @@ class scraper:
 
         await asyncio.gather(self.open_vids_pages(0))
 
-        print("GOING TO POST VIDEOS")
-        for video in self.vid_details:
-            print("POSTING VIDEO ", video)
-            self.post_to_site(video)
+        # print("GOING TO POST VIDEOS")
+        # for video in self.vid_details:
+        #     print("POSTING VIDEO ", video)
+        #     self.post_to_site(video)
 
     async def import_videos(self):
         previous_uploads = json.load(open(uploaded_file_path, "r"))
