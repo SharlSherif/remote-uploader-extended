@@ -58,11 +58,11 @@ class scraper:
         return image_in_base64
 
     def upload_image_to_imgur(self, image_in_base64):
-        if self.imgur_count >= 6:
+        if self.imgur_count >= 5:
             self.imgur_count = 0
             # sleep for 60 seconds
             print("GOING TO SLEEP ")
-            time.sleep(60)
+            time.sleep(120)
             print("WOKE UP..")
 
         headers = {'Authorization': "Client-ID "+imgurAPI_KEY}
@@ -78,8 +78,15 @@ class scraper:
             raise Exception(r.json()['data']['error']['message'])
         else:
             self.imgur_count += 1
-
+        print(r.json())
         return r.json()['data']['link']
+    
+    def upload_image_to_cdn(self, image_url,video_id):
+        r = req.post(f"https://cdn.wildfaps.com/upload?url={image_url}&video_id={video_id}")
+        if r.status_code != 200:
+            raise Exception(r.json())
+        print(r.json())
+        return r.json()['url']
 
     def remote_upload(self, video_url):
         url = f"https://netu.tv/api/file/remotedl?key={netuAPI_KEY}&url={video_url}"
@@ -97,6 +104,7 @@ class scraper:
             time.sleep(10)
         embed_code = self.get_embed_code(netu_file_code)
         print("[SUCCESSFUL UPLOAD]")
+        self.empty_queue(file_temp_id)
         return {'embed_code': embed_code, 'file_code':netu_file_code}
 
     def check_status(self, file_temp_id):
@@ -106,7 +114,11 @@ class scraper:
             return response.json()['result']['files'][file_temp_id]['file_code']
         else: 
             return ""
-
+    def empty_queue(self, file_temp_id):
+        url = f"https://netu.tv/api/file/delete_remotedl?key={netuAPI_KEY}&id={file_temp_id}"
+        response = req.get(url)
+        print("[DELETED REMOTE QUEUE]")
+        
     def get_embed_code(self, file_code):
         url = f"https://netu.tv/api/file/embed?key={netuAPI_KEY}&file_code={file_code}"
         response = req.get(url)
@@ -121,16 +133,22 @@ class scraper:
             except Exception as e:
                 pass
         return tags
-
-    def post_to_site(self, vid):
+    
+    async def is_posted_before (self, title):
         cursor.execute(
-            f"SELECT * FROM wp_posts where post_title = '{vid['title']}'")
+        f"SELECT * FROM wp_posts where post_title = '{title}'")
         wp_db.commit()
         records = cursor.fetchall()
 
         if len(records) > 0:
-            print("video was posted before ", vid)
-            return
+            print("video was posted before ", title)
+            return True
+        else:
+            return False
+    async def post_to_site(self, vid):
+        isPosted = await self.is_posted_before(vid['title'])
+        if isPosted == True:
+            return False
         # get last post id
         cursor.execute(
             "SELECT id FROM wp_posts WHERE id = (SELECT MAX(id) FROM wp_posts);")
@@ -143,7 +161,6 @@ class scraper:
             last_post_id = last_post[0]
         # calculating duration
         duration = int(vid['duration'].split(":")[0]) * 60
-        print(duration)
         # static
         post_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         future_post_id = last_post_id+1
@@ -330,11 +347,12 @@ class scraper:
              
         tags = self.get_tags(vid_page_document)
         duration = list(vid_page_document.find("ul", class_="video-meta").children)[3].text.replace(r" ", "")
-        image_in_base64 = self.convert_image_to_base64(video['thumbnail'])
-        thumbnail_imgur_link = self.upload_image_to_imgur(image_in_base64)
+        # image_in_base64 = self.convert_image_to_base64(video['thumbnail'])
+        thumbnail_imgur_link = self.upload_image_to_cdn(video['thumbnail'], video['id'])
+        title = title.replace(r"'", '')
         video = {
             "netu_embed_id": "",
-            "title": title.replace(r"'", ''),
+            "title": title,
             "embed": "",
             "isHD": isHD,
             "direct_url":direct_url,
@@ -345,15 +363,19 @@ class scraper:
             "thumbnail_imgur_link":thumbnail_imgur_link,
             **video
         }
-        print(video)
         print(f"[UPLOADING] {direct_url}")
+        isPosted = await self.is_posted_before(title)
+        if isPosted == True:
+            count = count+1
+            return await self.open_vids_pages(count)
+        
         netu_response = self.remote_upload(direct_url)
         video['netu_embed_code'] = netu_response['embed_code']
         video['netu_file_key'] = netu_response['file_code']
         video['netu_direct_url'] = f"https://waaw.to/f/{netu_response['file_code']}" 
         video['direct_url'] = direct_url
         video['google_drive'] = {"name": video['id'], "folderId":"17UbBSBUkM5ZMXMJrZRB9I6YZPJ-aR8pc", "folderName": "PO Data"}
-        self.post_to_site(video)
+        isPosted = self.post_to_site(video)
         Video.insertOne(video)
         print("[STORED]")
 
@@ -367,6 +389,8 @@ class scraper:
         print("To Page : ")
         toPage = int(input())
         time.sleep(2)
+        #COmment this out
+        # time.sleep(60*24)
         for n in range(fromPage, toPage):
             print(f"[PAGE] {n}")
             url = f"https://pornhat.com/{n}/"
@@ -397,11 +421,57 @@ class scraper:
         #     self.post_to_site(video)
 
     async def import_videos(self):
-        previous_uploads = json.load(open(uploaded_file_path, "r"))
+        previous_uploads = Video.getAll()
         print(len(previous_uploads))
         for video in previous_uploads:
-            print("POSTING VIDEO ", video)
+            print("POSTING VIDEO ", video['title'])
             self.post_to_site(video)
+
+    async def checkDuplicates(self):
+        previous_uploads = Video.getAll()
+        shouldDeleteFromMongo=[]
+        foundDups=[]
+        print(len(previous_uploads))
+        for video1 in previous_uploads:
+            findCount = 0
+            for video2 in previous_uploads:
+                if video1['source'] == video2['source']:
+                    findCount+=1
+            if findCount > 1:
+                foundDups.append(video1)
+
+        for dup in foundDups:
+            post = cursor.execute(
+                f"SELECT ID FROM wp_posts where post_title='{dup['title']}' and post_parent=0;")
+            wp_db.commit()
+            post_id = cursor.fetchall()[0][0]
+            cursor.execute(
+            f"select * from wp_postmeta where post_id='{post_id}' and meta_key = 'thumb' and meta_value='{dup['thumbnail_imgur_link']}';")
+            wp_db.commit()
+            records = cursor.fetchall()
+            if len(records) > 0:
+                print(records)
+            else:
+                shouldDeleteFromMongo.append((dup['_id']))
+        print(len(shouldDeleteFromMongo))
+        print(shouldDeleteFromMongo)
+        Video.deleteMany((shouldDeleteFromMongo))
+
+    async def deleteNotStoredInWp(self):
+        previous_uploads = Video.getAll()
+        cursor.execute(f"SELECT post_title FROM wp_posts where post_parent=0;")
+        wp_db.commit()
+        posts_titles = cursor.fetchall()
+        shouldDeleteFromMongo=[]
+        for doc in previous_uploads:
+            exists=False
+            for title in posts_titles:
+                if doc['title'] == (title[0]):
+                    exists = True
+            if exists == False:
+                shouldDeleteFromMongo.append(doc['_id'])
+        print(len(shouldDeleteFromMongo))
+        Video.deleteMany((shouldDeleteFromMongo))
 
     async def test(self):
         vid = {"embed_id": "WjRnT1BDZ0hWVlRnMGp2TVNLdHoxQT09", "title": "Julia Rain \u2013 Intimate Casting", "embed": "https://hqq.to/e/WjRnT1BDZ0hWVlRnMGp2TVNLdHoxQT09", "description": "\u00a0", "duration": "\u00a0\u00a0100 min ", "categories": ["  Anal", " Blonde", " Blowjobs", " Clips", " Doggystyle"], "tags": ["Julia Rain ", "Rocco Siffredi"], "id": "364028", "thumbnail": "https://xxvideoss.org/wp-content/uploads/2020/04/456456450978645654.jpg", "source": "https://xxvideoss.org/julia-rain-intimate-casting/",
@@ -415,6 +485,7 @@ loop.run_until_complete(sp.main())
 
 asyncio.ru(sp.main())
 threading.Timer(2.0, sp.open_vids_pages).start()
+threading.Timer(2.0, sp.is_posted_before).start()
 def exit_handler():
     browser.quit()
 

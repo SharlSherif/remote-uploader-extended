@@ -11,3 +11,6 @@ class Video(abc.ABC):
 
     def insertOne(vid):
         return upload_queue.insert(vid)
+
+    def deleteMany(ids):
+        return upload_success.delete_many({"_id": {"$in": ids}})
