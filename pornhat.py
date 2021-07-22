@@ -483,7 +483,7 @@ class scraper:
 
 sp = scraper()
 loop = asyncio.get_event_loop()
-loop.run_until_complete(sp.import_videos())
+# loop.run_until_complete(sp.import_videos())
 
 # asyncio.ru(sp.import_videos())
 loop.run_until_complete(sp.main())
