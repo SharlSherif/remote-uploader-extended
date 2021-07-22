@@ -168,6 +168,8 @@ class scraper:
         post_title = str(vid['title'])
         post_name = vid['source'].replace(
             'https://pornhat.com/', '').replace('/', '')
+        if len(post_name) > 200:
+            post_name = post_name[1:200]
         embed = str(vid['netu_embed_code'])
         post_content = re.sub('\s[^0-9a-zA-Z]+', '', str(vid['description']))
         post_content = post_content.replace(r"'", '').replace("Description: ","")
@@ -375,7 +377,7 @@ class scraper:
         video['netu_direct_url'] = f"https://waaw.to/f/{netu_response['file_code']}" 
         video['direct_url'] = direct_url
         video['google_drive'] = {"name": video['id'], "folderId":"17UbBSBUkM5ZMXMJrZRB9I6YZPJ-aR8pc", "folderName": "PO Data"}
-        isPosted = self.post_to_site(video)
+        self.post_to_site(video)
         Video.insertOne(video)
         print("[STORED]")
 
@@ -425,7 +427,7 @@ class scraper:
         print(len(previous_uploads))
         for video in previous_uploads:
             print("POSTING VIDEO ", video['title'])
-            self.post_to_site(video)
+            await self.post_to_site(video)
 
     async def checkDuplicates(self):
         previous_uploads = Video.getAll()
@@ -481,10 +483,13 @@ class scraper:
 
 sp = scraper()
 loop = asyncio.get_event_loop()
-loop.run_until_complete(sp.main())
+loop.run_until_complete(sp.import_videos())
 
-asyncio.ru(sp.main())
+# asyncio.ru(sp.import_videos())
+loop.run_until_complete(sp.main())
+# asyncio.ru(sp.main())
 threading.Timer(2.0, sp.open_vids_pages).start()
+threading.Timer(2.0, sp.import_videos).start()
 threading.Timer(2.0, sp.is_posted_before).start()
 def exit_handler():
     browser.quit()
