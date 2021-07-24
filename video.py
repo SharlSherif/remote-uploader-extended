@@ -9,6 +9,9 @@ class Video(abc.ABC):
     def getAll():
         return (list(upload_success.find({})))
 
+    def getAllFromQueue():
+        return (list(upload_queue.find({})))
+
     def insertOne(vid):
         return upload_queue.insert(vid)
 
