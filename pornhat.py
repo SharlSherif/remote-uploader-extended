@@ -542,11 +542,11 @@ class scraper:
 sp = scraper()
 loop = asyncio.get_event_loop()
 # loop.run_until_complete(sp.import_videos())
-# loop.run_until_complete(sp.main())
+loop.run_until_complete(sp.main())
 
 # asyncio.ru(sp.import_videos())
 # print(asyncio.run(sp.remote_upload_streamtape("https://www.pornhat.com/get_file/4/0f0d406a3ab1768d95ddad3a0c46d081/51000/51737/51737_720p.mp4/?download=true&download_filename=vip-table-hot-maid-ep-1_720p.mp4&br=1000")))
-asyncio.ru(sp.main())
+# asyncio.run(sp.main())
 # asyncio.run(sp.remote_upload_doodstream("https://www.pornhat.com/get_file/4/0f0d406a3ab1768d95ddad3a0c46d081/51000/51737/51737_720p.mp4/?download=true&download_filename=vip-table-hot-maid-ep-1_720p.mp4&br=1000"))
 threading.Timer(2.0, sp.open_vids_pages).start()
 threading.Timer(2.0, sp.import_videos).start()

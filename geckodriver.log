@@ -546,3 +546,13 @@ console.log: WebExtensions: reset-default-search: No addons in our list are inst
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileKBoyM9\\search.json.mozlz4", (void 0)))
 1627909956896	Marionette	INFO	Listening on port 59551
 1627909957207	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofiledtvuX7"
+*** You are running in headless mode.
+1627910215470	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofiledtvuX7\\search.json.mozlz4", (void 0)))
+1627910216373	Marionette	INFO	Listening on port 50126
+1627910216731	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
