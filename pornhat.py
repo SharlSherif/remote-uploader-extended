@@ -140,7 +140,7 @@ class scraper:
         return {'embed_code': embed_code, 'file_code': file_temp_id, 'direct_url':streamtape_file_url, 'player_type':'streamtape'}
 
     def get_embed_code_streamtape(self, url):
-        return f'<iframe src="{url.replace("/v/","/e/")}"></iframe>'
+        return f'<iframe src="{url.replace("/v/","/e/")}" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>'
 
     def empty_queue_streamtape(self, file_temp_id):
         url = f"https://api.streamtape.com/remotedl/remove?login=7f08db2f59c5e04afc80&key=8d623Q7LA6tobml&id={file_temp_id}"

@@ -62,7 +62,7 @@ class scraper:
             'https://pornhat.com/', '').replace('/', '')
         if len(post_name) > 200:
             post_name = post_name[1:200]
-        embed = str(vid['netu_embed_code'])
+        embed = str(vid['embed_code'])
         post_content = re.sub('\s[^0-9a-zA-Z]+', '', str(vid['description']))
         post_content = post_content.replace(r"'", '').replace("Description: ","")
         # ? modify the thumbnail to remove the xxvideos.org logo

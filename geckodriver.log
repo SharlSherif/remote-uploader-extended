@@ -531,43 +531,82 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1627909218120	Marionette	WARN	TLS certificate errors will be ignored for this session
 console.log: WebExtensions: reset-default-search: starting.
 console.log: WebExtensions: reset-default-search: No addons in our list are installed.
-\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileTC4y8U"
-*** You are running in headless mode.
-1627909259576	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileTC4y8U\\search.json.mozlz4", (void 0)))
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x390144,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 25764, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1627911676449	Marionette	INFO	Stopped listening on port 53083
+\\rust_mozprofileTC4y8U\\search.json.mozlz4", (void 0)))
 1627909260486	Marionette	INFO	Listening on port 53512
 1627909260835	Marionette	WARN	TLS certificate errors will be ignored for this session
 console.log: WebExtensions: reset-default-search: starting.
 console.log: WebExtensions: reset-default-search: No addons in our list are installed.
-1627909952273	geckodriver	INFO	Listening on 127.0.0.1:60754
-1627909955654	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileKBoyM9"
-*** You are running in headless mode.
-1627909955934	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileKBoyM9\\search.json.mozlz4", (void 0)))
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x390144,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 25740, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1627911676039	Marionette	INFO	Stopped listening on port 53512
+n: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileKBoyM9\\search.json.mozlz4", (void 0)))
 1627909956896	Marionette	INFO	Listening on port 59551
 1627909957207	Marionette	WARN	TLS certificate errors will be ignored for this session
 console.log: WebExtensions: reset-default-search: starting.
 console.log: WebExtensions: reset-default-search: No addons in our list are installed.
-\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofiledtvuX7"
-*** You are running in headless mode.
-1627910215470	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofiledtvuX7\\search.json.mozlz4", (void 0)))
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x390144,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 12212, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1627911675504	Marionette	INFO	Stopped listening on port 59551
+\\rust_mozprofiledtvuX7\\search.json.mozlz4", (void 0)))
 1627910216373	Marionette	INFO	Listening on port 50126
 1627910216731	Marionette	WARN	TLS certificate errors will be ignored for this session
 console.log: WebExtensions: reset-default-search: starting.
 console.log: WebExtensions: reset-default-search: No addons in our list are installed.
-1627910883292	geckodriver	INFO	Listening on 127.0.0.1:62296
-1627910886621	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilewbWRXP"
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilewbWRXP"
 *** You are running in headless mode.
 1627910886918	Marionette	INFO	Marionette enabled
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilewbWRXP\\search.json.mozlz4", (void 0)))
 1627910887922	Marionette	INFO	Listening on port 62315
 1627910888171	Marionette	WARN	TLS certificate errors will be ignored for this session
-1627910922507	geckodriver	INFO	Listening on 127.0.0.1:62443
-1627910925562	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofile32j3Ef"
-*** You are running in headless mode.
-1627910925891	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofile32j3Ef\\search.json.mozlz4", (void 0)))
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x390144,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 13344, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1627911675030	Marionette	INFO	Stopped listening on port 62315
+\\rust_mozprofile32j3Ef\\search.json.mozlz4", (void 0)))
 1627910926997	Marionette	INFO	Listening on port 62455
 1627910927111	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 10880, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1627911674666	Marionette	INFO	Stopped listening on port 62455
+t: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileJhMMPS\\search.json.mozlz4", (void 0)))
+1627911040471	Marionette	INFO	Listening on port 49549
+1627911040769	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+[Child 7228, MediaDecoderStateMachine #1] WARNING: Decoder=229ef8a0800 Decode error: NS_ERROR_DOM_MEDIA_CANCELED (0x806e000a) - RefPtr<MediaSourceTrackDemuxer::SeekPromise> __cdecl mozilla::MediaSourceTrackDemuxer::DoSeek(const mozilla::media::TimeUnit &): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp:3490
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+[Parent 3804, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1627911674132	Marionette	INFO	Stopped listening on port 49549

@@ -12,6 +12,8 @@ class Video(abc.ABC):
     def getAllFromQueue():
         return (list(upload_queue.find({})))
 
+    def updateOne(_id, vid):
+        return upload_success.update_one({"_id":_id}, vid)
     def insertOne(vid):
         return upload_queue.insert(vid)
 
