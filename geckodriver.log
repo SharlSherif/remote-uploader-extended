@@ -252,9 +252,10 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1626910305148	Marionette	INFO	Listening on port 54250
 console.log: WebExtensions: reset-default-search: starting.
 console.log: WebExtensions: reset-default-search: No addons in our list are installed.
-er	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileR4ZR21"
-*** You are running in headless mode.
-1626910318200	Marionette	INFO	Marionette enabled
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 22832, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1626922976844	Marionette	INFO	Stopped listening on port 54250
+e	INFO	Marionette enabled
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileR4ZR21\\search.json.mozlz4", (void 0)))
 1626910319077	Marionette	INFO	Listening on port 53429
 1626910319457	Marionette	WARN	TLS certificate errors will be ignored for this session
@@ -264,24 +265,284 @@ JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Us
 JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
 console.log: WebExtensions: reset-default-search: starting.
 console.log: WebExtensions: reset-default-search: No addons in our list are installed.
-1626920516198	geckodriver	INFO	Listening on 127.0.0.1:57060
-1626920519632	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilelDao67"
-*** You are running in headless mode.
-1626920520015	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilelDao67\\search.json.mozlz4", (void 0)))
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x390144,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 13484, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1626922977421	Marionette	INFO	Stopped listening on port 53429
+n: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilelDao67\\search.json.mozlz4", (void 0)))
 1626920520953	Marionette	INFO	Listening on port 57079
 1626920521166	Marionette	WARN	TLS certificate errors will be ignored for this session
-1626920563852	geckodriver	INFO	Listening on 127.0.0.1:64417
-1626920567286	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofiletPprw4"
-*** You are running in headless mode.
-1626920567552	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofiletPprw4\\search.json.mozlz4", (void 0)))
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 11376, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1626922978147	Marionette	INFO	Stopped listening on port 57079
+t: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofiletPprw4\\search.json.mozlz4", (void 0)))
 1626920568440	Marionette	INFO	Listening on port 64433
 1626920568832	Marionette	WARN	TLS certificate errors will be ignored for this session
-1626920811961	geckodriver	INFO	Listening on 127.0.0.1:50968
-1626920815377	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileWhJCfN"
-*** You are running in headless mode.
-1626920815643	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileWhJCfN\\search.json.mozlz4", (void 0)))
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x390144,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 9192, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1626922978670	Marionette	INFO	Stopped listening on port 64433
+p\\rust_mozprofileWhJCfN\\search.json.mozlz4", (void 0)))
 1626920816568	Marionette	INFO	Listening on port 50983
 1626920816920	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+[Parent 19432, IPC I/O Parent] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:544
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 19432, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1626922979120	Marionette	INFO	Stopped listening on port 50983
+et: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileEL0iTz\\search.json.mozlz4", (void 0)))
+1626921495849	Marionette	INFO	Listening on port 51949
+1626921496186	Marionette	WARN	TLS certificate errors will be ignored for this session
+1626922016061	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x390144,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 23804, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1626922979890	Marionette	INFO	Stopped listening on port 51949
+s\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileWNxWEG\\search.json.mozlz4", (void 0)))
+1626921518471	Marionette	INFO	Listening on port 52010
+1626921518768	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1626922618924	geckodriver	INFO	Listening on 127.0.0.1:53204
+1626922622207	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilewNC6bT"
+*** You are running in headless mode.
+1626922622475	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilewNC6bT\\search.json.mozlz4", (void 0)))
+1626922623364	Marionette	INFO	Listening on port 53218
+1626922623757	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1626923045200	geckodriver	INFO	Listening on 127.0.0.1:62855
+1626923048389	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileAQsNTb"
+*** You are running in headless mode.
+1626923048677	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileAQsNTb\\search.json.mozlz4", (void 0)))
+1626923049586	Marionette	INFO	Listening on port 62868
+1626923049932	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+u are running in headless mode.
+1626923230417	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileAjlxzH\\search.json.mozlz4", (void 0)))
+1626923231319	Marionette	INFO	Listening on port 64446
+1626923231681	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+NFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilessdugz"
+*** You are running in headless mode.
+1626924326377	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilessdugz\\search.json.mozlz4", (void 0)))
+1626924327450	Marionette	INFO	Listening on port 58429
+1626924327478	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+[Parent 34316, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1626925542748	Marionette	INFO	Stopped listening on port 58429
+ue to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1626925549596	geckodriver	INFO	Listening on 127.0.0.1:52878
+1626925552658	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilevQEFua"
+*** You are running in headless mode.
+1626925552948	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilevQEFua\\search.json.mozlz4", (void 0)))
+1626925553998	Marionette	INFO	Listening on port 52890
+1626925554209	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1627096347672	geckodriver	INFO	Listening on 127.0.0.1:60782
+1627096351024	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilehbpaTp"
+*** You are running in headless mode.
+1627096351647	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilehbpaTp\\search.json.mozlz4", (void 0)))
+1627096353034	Marionette	INFO	Listening on port 60795
+1627096353104	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1627101730526	geckodriver	INFO	Listening on 127.0.0.1:59134
+1627101733823	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilejtEBwW"
+*** You are running in headless mode.
+1627101734126	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilejtEBwW\\search.json.mozlz4", (void 0)))
+1627101735116	Marionette	INFO	Listening on port 59148
+1627101735351	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+Exiting due to channel error.
+-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofile6z6VJ7"
+*** You are running in headless mode.
+1627101750370	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofile6z6VJ7\\search.json.mozlz4", (void 0)))
+1627101751257	Marionette	INFO	Listening on port 59213
+1627101751641	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilew5ISv4"
+*** You are running in headless mode.
+1627101774856	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilew5ISv4\\search.json.mozlz4", (void 0)))
+1627101775829	Marionette	INFO	Listening on port 59278
+1627101776091	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileqahfKM"
+*** You are running in headless mode.
+1627101807226	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileqahfKM\\search.json.mozlz4", (void 0)))
+1627101808105	Marionette	INFO	Listening on port 59351
+1627101808478	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileCBfrKB"
+*** You are running in headless mode.
+1627101828831	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileCBfrKB\\search.json.mozlz4", (void 0)))
+1627101829834	Marionette	INFO	Listening on port 59418
+1627101830057	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofile2ihXRJ"
+*** You are running in headless mode.
+1627101851464	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofile2ihXRJ\\search.json.mozlz4", (void 0)))
+1627101852417	Marionette	INFO	Listening on port 59486
+1627101852702	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilemxuyPw"
+*** You are running in headless mode.
+1627101873755	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilemxuyPw\\search.json.mozlz4", (void 0)))
+1627101874646	Marionette	INFO	Listening on port 59557
+1627101874997	Marionette	WARN	TLS certificate errors will be ignored for this session
+1627101880788	Marionette	INFO	Stopped listening on port 59557
+1627101897074	geckodriver	INFO	Listening on 127.0.0.1:59616
+1627101900125	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilem3bZOa"
+*** You are running in headless mode.
+1627101900436	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilem3bZOa\\search.json.mozlz4", (void 0)))
+1627101901424	Marionette	INFO	Listening on port 57757
+1627101901664	Marionette	WARN	TLS certificate errors will be ignored for this session
+1627101910975	Marionette	INFO	Stopped listening on port 57757
+1627102114518	geckodriver	INFO	Listening on 127.0.0.1:64758
+1627102117819	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileYVy20Q"
+*** You are running in headless mode.
+1627102118092	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileYVy20Q\\search.json.mozlz4", (void 0)))
+1627102119041	Marionette	INFO	Listening on port 64772
+1627102119366	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileMRRlcR"
+*** You are running in headless mode.
+1627102133131	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileMRRlcR\\search.json.mozlz4", (void 0)))
+1627102204935	geckodriver	INFO	Listening on 127.0.0.1:64041
+1627102208221	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileP6gist"
+*** You are running in headless mode.
+1627102208561	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileP6gist\\search.json.mozlz4", (void 0)))
+out of memory: 0x0000000000000018 bytes requested
+out of memory: 0x0000000000000078 bytes requested
+1627631761327	geckodriver	INFO	Listening on 127.0.0.1:50280
+1627631764887	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileTM5CaY"
+*** You are running in headless mode.
+1627631766119	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileTM5CaY\\search.json.mozlz4", (void 0)))
+1627631767245	Marionette	INFO	Listening on port 50298
+1627631767728	Marionette	WARN	TLS certificate errors will be ignored for this session
+1627631773826	Marionette	INFO	Stopped listening on port 50298
+1627631807988	geckodriver	INFO	Listening on 127.0.0.1:50380
+1627631811023	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilehaxWbA"
+*** You are running in headless mode.
+1627631811439	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilehaxWbA\\search.json.mozlz4", (void 0)))
+1627631812691	Marionette	INFO	Listening on port 50393
+1627631813075	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
+[Parent 29564, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1627641513310	Marionette	INFO	Stopped listening on port 50393
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1627909212691	geckodriver	INFO	Listening on 127.0.0.1:53063
+1627909216055	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofile4v9Sf9"
+*** You are running in headless mode.
+1627909216658	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofile4v9Sf9\\search.json.mozlz4", (void 0)))
+1627909217853	Marionette	INFO	Listening on port 53083
+1627909218120	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileTC4y8U"
+*** You are running in headless mode.
+1627909259576	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileTC4y8U\\search.json.mozlz4", (void 0)))
+1627909260486	Marionette	INFO	Listening on port 53512
+1627909260835	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1627909952273	geckodriver	INFO	Listening on 127.0.0.1:60754
+1627909955654	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileKBoyM9"
+*** You are running in headless mode.
+1627909955934	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileKBoyM9\\search.json.mozlz4", (void 0)))
+1627909956896	Marionette	INFO	Listening on port 59551
+1627909957207	Marionette	WARN	TLS certificate errors will be ignored for this session

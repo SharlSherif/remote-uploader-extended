@@ -11,7 +11,6 @@ import os
 from wp_db import wp_db, cursor
 from helpers import is_in_array, find, clean_str
 from metadata_db import metadata_db
-from pil import Image
 from io import BytesIO
 import base64
 import re

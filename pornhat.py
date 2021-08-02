@@ -24,6 +24,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.common.by import By
 import atexit
 from selenium.webdriver.common.by import By
+from doodstream import DoodStream
 
 load_dotenv()
 
@@ -33,6 +34,9 @@ netuAPI_KEY = os.environ.get('netuAPI_KEY')
 options = Options()
 options.headless = True
 browser = webdriver.Firefox(options=options)
+
+dood = DoodStream("45803apn523iva2drhglg")
+
 class scraper:
     vid_details = []
     current_id = ''
@@ -80,9 +84,10 @@ class scraper:
             self.imgur_count += 1
         print(r.json())
         return r.json()['data']['link']
-    
-    def upload_image_to_cdn(self, image_url,video_id):
-        r = req.post(f"https://cdn.wildfaps.com/upload?url={image_url}&video_id={video_id}")
+
+    def upload_image_to_cdn(self, image_url, video_id):
+        r = req.post(
+            f"https://cdn.wildfaps.com/upload?url={image_url}&video_id={video_id}")
         if r.status_code != 200:
             raise Exception(r.json())
         print(r.json())
@@ -91,13 +96,13 @@ class scraper:
     def remote_upload(self, video_url):
         url = f"https://netu.tv/api/file/remotedl?key={netuAPI_KEY}&url={video_url}"
         response = req.get(url)
-        file_temp_id= list(response.json()['result']['id'].keys())[0]
-        isUploaded=False
+        file_temp_id = list(response.json()['result']['id'].keys())[0]
+        isUploaded = False
         netu_file_code = ""
-        while isUploaded== False:
+        while isUploaded == False:
             result = self.check_status(file_temp_id)
             if len(result) > 0:
-                isUploaded=True
+                isUploaded = True
                 netu_file_code = result
             else:
                 print("Still uploading to netu..")
@@ -105,38 +110,85 @@ class scraper:
         embed_code = self.get_embed_code(netu_file_code)
         print("[SUCCESSFUL UPLOAD]")
         self.empty_queue(file_temp_id)
-        return {'embed_code': embed_code, 'file_code':netu_file_code}
+        return {'embed_code': embed_code, 'file_code': netu_file_code, "direct_url":f"https://waaw.to/f/{netu_file_code}", 'player_type':'netu'}
 
+    async def remote_upload_doodstream(self, video_url):
+        x =  dood.remote_upload(video_url)
+        file_code = x['result']['filecode']
+        print(dood.file_info(file_code))
+
+    def remote_upload_streamtape(self, video_url):
+        url = f"https://api.streamtape.com/remotedl/add?login=7f08db2f59c5e04afc80&key=8d623Q7LA6tobml&url={video_url}"
+        response = req.get(url)
+        file_temp_id = response.json()['result']['id']
+        print(file_temp_id)
+        isUploaded = False
+        streamtape_file_url = ""
+        while isUploaded == False:
+            result = self.check_status_streamtape(file_temp_id)
+            if result == 'error':
+                return self.remote_upload_streamtape(video_url)
+            elif len(result) > 0:
+                isUploaded = True
+                streamtape_file_url = result
+            else:
+                print("Still uploading to streamtape..")
+            time.sleep(6)
+        embed_code = self.get_embed_code_streamtape(streamtape_file_url)
+        print("[SUCCESSFUL UPLOAD]")
+        self.empty_queue_streamtape(file_temp_id)
+        return {'embed_code': embed_code, 'file_code': file_temp_id, 'direct_url':streamtape_file_url, 'player_type':'streamtape'}
+
+    def get_embed_code_streamtape(self, url):
+        return f'<iframe src="{url.replace("/v/","/e/")}"></iframe>'
+
+    def empty_queue_streamtape(self, file_temp_id):
+        url = f"https://api.streamtape.com/remotedl/remove?login=7f08db2f59c5e04afc80&key=8d623Q7LA6tobml&id={file_temp_id}"
+        response = req.get(url)
+        print("[DELETED REMOTE QUEUE]")
+
+    def check_status_streamtape(self, file_temp_id):
+        url = f"https://api.streamtape.com/remotedl/status?login=7f08db2f59c5e04afc80&key=8d623Q7LA6tobml&id={file_temp_id}"
+        response = req.get(url)
+        if response.json()['result'][file_temp_id]['status'] == 'error':
+            return 'error'
+        elif response.json()['result'][file_temp_id]['status'] == 'finished':
+            return response.json()['result'][file_temp_id]['url']
+        else:
+            return ""
+            
     def check_status(self, file_temp_id):
         url = f"https://netu.tv/api/file/status_remotedl?key={netuAPI_KEY}&id={file_temp_id}"
         response = req.get(url)
         if response.json()['result']['files'][file_temp_id]['status'] == 'successful':
             return response.json()['result']['files'][file_temp_id]['file_code']
-        else: 
+        else:
             return ""
+
     def empty_queue(self, file_temp_id):
         url = f"https://netu.tv/api/file/delete_remotedl?key={netuAPI_KEY}&id={file_temp_id}"
         response = req.get(url)
         print("[DELETED REMOTE QUEUE]")
-        
+
     def get_embed_code(self, file_code):
         url = f"https://netu.tv/api/file/embed?key={netuAPI_KEY}&file_code={file_code}"
         response = req.get(url)
         return str(response.json()['result'][file_code]["embed_code_script"])
 
     def get_tags(self, vid_page_document):
-        tags=[]
-        tags_doc = list(vid_page_document.find("ul", class_="video-tags").children)
+        tags = []
+        tags_doc = list(vid_page_document.find(
+            "ul", class_="video-tags").children)
         for n in range(2, len(tags_doc)):
             try:
                 tags.append(tags_doc[n].a.text)
             except Exception as e:
                 pass
         return tags
-    
-    async def is_posted_before (self, title):
+
+    async def is_posted_before(self, title):
         cursor.execute(
-        f"SELECT * FROM wp_posts where post_title = '{title}'")
+            f"SELECT * FROM wp_posts where post_title = '{title}'")
         wp_db.commit()
         records = cursor.fetchall()
 
@@ -145,6 +197,7 @@ class scraper:
             return True
         else:
             return False
+
     async def post_to_site(self, vid):
         isPosted = await self.is_posted_before(vid['title'])
         if isPosted == True:
@@ -172,7 +225,8 @@ class scraper:
             post_name = post_name[1:200]
         embed = str(vid['netu_embed_code'])
         post_content = re.sub('\s[^0-9a-zA-Z]+', '', str(vid['description']))
-        post_content = post_content.replace(r"'", '').replace("Description: ","")
+        post_content = post_content.replace(
+            r"'", '').replace("Description: ", "")
         # ? modify the thumbnail to remove the xxvideos.org logo
         thumbnail_imgur_link = vid['thumbnail_imgur_link']
         # handles if there's a description for the video or not.
@@ -322,62 +376,66 @@ class scraper:
 
         video = self.vid_details[count]
         vid_page_url = video['source']
-        
-      
-        
+
         browser.get(vid_page_url)
-        WebDriverWait(browser, 50).until(expected_conditions.presence_of_element_located((By.TAG_NAME, "video"))) 
+        WebDriverWait(browser, 50).until(
+            expected_conditions.presence_of_element_located((By.TAG_NAME, "video")))
         vid_page_document = BeautifulSoup(
             browser.page_source, features="html.parser")
 
-        title = vid_page_document.find("div",class_="title-holder").h1.text
-        direct_url=None
-        isHD=False
-        download_link =  list(vid_page_document.find_all("a", class_="download-link"))
-        video_url = (vid_page_document.find("video", class_="fp-engine")['src'])
+        title = vid_page_document.find("div", class_="title-holder").h1.text
+        original_video_url = None
+        isHD = False
+        download_link = list(vid_page_document.find_all(
+            "a", class_="download-link"))
+        video_url = (vid_page_document.find(
+            "video", class_="fp-engine")['src'])
         if download_link != None:
-            direct_url = download_link.pop()['href']
-            isHD=True
+            original_video_url = download_link.pop()['href']
+            isHD = True
         else:
-            direct_url = video_url
-            
+            original_video_url = video_url
+
         description = vid_page_document.find("div", class_="desc")
         if description == None:
             description = ""
         else:
             description = description.text
-             
+
         tags = self.get_tags(vid_page_document)
-        duration = list(vid_page_document.find("ul", class_="video-meta").children)[3].text.replace(r" ", "")
+        duration = list(vid_page_document.find(
+            "ul", class_="video-meta").children)[3].text.replace(r" ", "")
         # image_in_base64 = self.convert_image_to_base64(video['thumbnail'])
-        thumbnail_imgur_link = self.upload_image_to_cdn(video['thumbnail'], video['id'])
+        thumbnail_imgur_link = self.upload_image_to_cdn(
+            video['thumbnail'], video['id'])
         title = title.replace(r"'", '')
         video = {
             "netu_embed_id": "",
             "title": title,
             "embed": "",
             "isHD": isHD,
-            "direct_url":direct_url,
+            "original_video_url": original_video_url,
             "description": description,
             "duration": duration,
             "categories": [],
             "tags": tags,
-            "thumbnail_imgur_link":thumbnail_imgur_link,
+            "thumbnail_imgur_link": thumbnail_imgur_link,
             **video
         }
-        print(f"[UPLOADING] {direct_url}")
+        print(f"[UPLOADING] {original_video_url}")
         isPosted = await self.is_posted_before(title)
         if isPosted == True:
             count = count+1
             return await self.open_vids_pages(count)
-        
-        netu_response = self.remote_upload(direct_url)
-        video['netu_embed_code'] = netu_response['embed_code']
-        video['netu_file_key'] = netu_response['file_code']
-        video['netu_direct_url'] = f"https://waaw.to/f/{netu_response['file_code']}" 
-        video['direct_url'] = direct_url
-        video['google_drive'] = {"name": video['id'], "folderId":"17UbBSBUkM5ZMXMJrZRB9I6YZPJ-aR8pc", "folderName": "PO Data"}
-        self.post_to_site(video)
+
+        video_response = self.remote_upload_streamtape(original_video_url)
+        video['embed_code'] = video_response['embed_code']
+        video['file_key'] = video_response['file_code']
+        video['player_direct_url'] = video_response['direct_url']
+        video['player_type'] = video_response['player_type']
+        video['google_drive'] = {
+            "name": video['id'], "folderId": "17UbBSBUkM5ZMXMJrZRB9I6YZPJ-aR8pc", "folderName": "PO Data"}
+        await self.post_to_site(video)
         Video.insertOne(video)
         print("[STORED]")
 
@@ -391,7 +449,7 @@ class scraper:
         print("To Page : ")
         toPage = int(input())
         time.sleep(2)
-        #COmment this out
+        # COmment this out
         # time.sleep(60*24)
         for n in range(fromPage, toPage):
             print(f"[PAGE] {n}")
@@ -400,7 +458,7 @@ class scraper:
             html = homepage.content.decode("utf-8")
             document = BeautifulSoup(html, features="html.parser")
 
-            for thumb in document.findAll('div',class_='thumb-bl-video'):
+            for thumb in document.findAll('div', class_='thumb-bl-video'):
                 id = thumb.a['href'].replace("/video/", "").replace("/", "")
                 print(id)
                 isNew = True
@@ -431,14 +489,14 @@ class scraper:
 
     async def checkDuplicates(self):
         previous_uploads = Video.getAll()
-        shouldDeleteFromMongo=[]
-        foundDups=[]
+        shouldDeleteFromMongo = []
+        foundDups = []
         print(len(previous_uploads))
         for video1 in previous_uploads:
             findCount = 0
             for video2 in previous_uploads:
                 if video1['source'] == video2['source']:
-                    findCount+=1
+                    findCount += 1
             if findCount > 1:
                 foundDups.append(video1)
 
@@ -448,7 +506,7 @@ class scraper:
             wp_db.commit()
             post_id = cursor.fetchall()[0][0]
             cursor.execute(
-            f"select * from wp_postmeta where post_id='{post_id}' and meta_key = 'thumb' and meta_value='{dup['thumbnail_imgur_link']}';")
+                f"select * from wp_postmeta where post_id='{post_id}' and meta_key = 'thumb' and meta_value='{dup['thumbnail_imgur_link']}';")
             wp_db.commit()
             records = cursor.fetchall()
             if len(records) > 0:
@@ -464,9 +522,9 @@ class scraper:
         cursor.execute(f"SELECT post_title FROM wp_posts where post_parent=0;")
         wp_db.commit()
         posts_titles = cursor.fetchall()
-        shouldDeleteFromMongo=[]
+        shouldDeleteFromMongo = []
         for doc in previous_uploads:
-            exists=False
+            exists = False
             for title in posts_titles:
                 if doc['title'] == (title[0]):
                     exists = True
@@ -484,14 +542,19 @@ class scraper:
 sp = scraper()
 loop = asyncio.get_event_loop()
 # loop.run_until_complete(sp.import_videos())
+# loop.run_until_complete(sp.main())
 
 # asyncio.ru(sp.import_videos())
-loop.run_until_complete(sp.main())
-# asyncio.ru(sp.main())
+# print(asyncio.run(sp.remote_upload_streamtape("https://www.pornhat.com/get_file/4/0f0d406a3ab1768d95ddad3a0c46d081/51000/51737/51737_720p.mp4/?download=true&download_filename=vip-table-hot-maid-ep-1_720p.mp4&br=1000")))
+asyncio.ru(sp.main())
+# asyncio.run(sp.remote_upload_doodstream("https://www.pornhat.com/get_file/4/0f0d406a3ab1768d95ddad3a0c46d081/51000/51737/51737_720p.mp4/?download=true&download_filename=vip-table-hot-maid-ep-1_720p.mp4&br=1000"))
 threading.Timer(2.0, sp.open_vids_pages).start()
 threading.Timer(2.0, sp.import_videos).start()
 threading.Timer(2.0, sp.is_posted_before).start()
+
+
 def exit_handler():
     browser.quit()
+
 
 atexit.register(exit_handler)
