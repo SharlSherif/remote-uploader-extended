@@ -25,18 +25,18 @@ class scraper:
 
     print(
         f"Total Previously Uploaded Videos is {len(uploaded_data)}")
+    async def is_posted_before(self, title):
+            cursor.execute(
+                f"SELECT * FROM wp_posts where post_title = '{title}'")
+            wp_db.commit()
+            records = cursor.fetchall()
 
-    async def is_posted_before (self, title):
-        cursor.execute(
-        f"SELECT * FROM wp_posts where post_title = '{title}'")
-        wp_db.commit()
-        records = cursor.fetchall()
+            if len(records) > 0:
+                print("video was posted before ", title)
+                return True
+            else:
+                return False
 
-        if len(records) > 0:
-            print("video was posted before ", title)
-            return True
-        else:
-            return False
     async def post_to_site(self, vid):
         isPosted = await self.is_posted_before(vid['title'])
         if isPosted == True:
@@ -64,7 +64,8 @@ class scraper:
             post_name = post_name[1:200]
         embed = str(vid['embed_code'])
         post_content = re.sub('\s[^0-9a-zA-Z]+', '', str(vid['description']))
-        post_content = post_content.replace(r"'", '').replace("Description: ","")
+        post_content = post_content.replace(
+            r"'", '').replace("Description: ", "")
         # ? modify the thumbnail to remove the xxvideos.org logo
         thumbnail_imgur_link = vid['thumbnail_imgur_link']
         # handles if there's a description for the video or not.

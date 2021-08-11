@@ -610,3 +610,173 @@ JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: th
 JavaScript error: chrome://marionette/content/driver.js, line 292: TypeError: this.currentSession is null
 [Parent 3804, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
 1627911674132	Marionette	INFO	Stopped listening on port 49549
+1627911679465	geckodriver	INFO	Listening on 127.0.0.1:51875
+1627911682728	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileQc7gsA"
+*** You are running in headless mode.
+1627911683059	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileQc7gsA\\search.json.mozlz4", (void 0)))
+1627911683995	Marionette	INFO	Listening on port 51889
+1627911684264	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+Exiting due to channel error.
+Listening on 127.0.0.1:59298
+1627914491512	geckodriver	INFO	Listening on 127.0.0.1:56775
+1627914494551	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofile5vOOEi"
+*** You are running in headless mode.
+1627914494834	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofile5vOOEi\\search.json.mozlz4", (void 0)))
+1627914495832	Marionette	INFO	Listening on port 56789
+1627914496089	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+[GFX1-]: ReceExiting due to channel error.
+ive IPC close with reason=AbnormalShutdown
+rs\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilerZkRGp"
+*** You are running in headless mode.
+1627914529165	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilerZkRGp\\search.json.mozlz4", (void 0)))
+1627914530240	Marionette	INFO	Listening on port 56907
+1627914530403	Marionette	WARN	TLS certificate errors will be ignored for this session
+1627914536330	Marionette	INFO	Stopped listening on port 56907
+1627914574113	geckodriver	INFO	Listening on 127.0.0.1:57010
+1627914577161	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileAFB1ml"
+*** You are running in headless mode.
+1627914577428	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileAFB1ml\\search.json.mozlz4", (void 0)))
+1627914578340	Marionette	INFO	Listening on port 57021
+1627914578705	Marionette	WARN	TLS certificate errors will be ignored for this session
+1627914584260	Marionette	INFO	Stopped listening on port 57021
+1627914615996	geckodriver	INFO	Listening on 127.0.0.1:54401
+1627914619027	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileJdbXYk"
+*** You are running in headless mode.
+1627914619304	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileJdbXYk\\search.json.mozlz4", (void 0)))
+1627914620189	Marionette	INFO	Listening on port 54411
+1627914620579	Marionette	WARN	TLS certificate errors will be ignored for this session
+1627914644441	Marionette	INFO	Stopped listening on port 54411
+1627914681421	geckodriver	INFO	Listening on 127.0.0.1:54523
+1627914685468	geckodriver	INFO	Listening on 127.0.0.1:54551
+1627914688484	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofile6gLBTt"
+*** You are running in headless mode.
+1627914688755	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofile6gLBTt\\search.json.mozlz4", (void 0)))
+1627914689710	Marionette	INFO	Listening on port 54563
+1627914690020	Marionette	WARN	TLS certificate errors will be ignored for this session
+1627914713782	Marionette	INFO	Stopped listening on port 54563
+1627914752255	geckodriver	INFO	Listening on 127.0.0.1:65282
+1627914755284	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileLmewvA"
+*** You are running in headless mode.
+1627914755598	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileLmewvA\\search.json.mozlz4", (void 0)))
+1627914756581	Marionette	INFO	Listening on port 65304
+1627914756831	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+Exiting due to channel error.
+-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofile5wtlvA"
+*** You are running in headless mode.
+1627914780860	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofile5wtlvA\\search.json.mozlz4", (void 0)))
+1627914781832	Marionette	INFO	Listening on port 65393
+1627914782140	Marionette	WARN	TLS certificate errors will be ignored for this session
+1627914805553	Marionette	INFO	Stopped listening on port 65393
+1627914927539	geckodriver	INFO	Listening on 127.0.0.1:56924
+1627914930565	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileiXVhdG"
+*** You are running in headless mode.
+1627914930886	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileiXVhdG\\search.json.mozlz4", (void 0)))
+1627914931782	Marionette	INFO	Listening on port 56938
+1627914932117	Marionette	WARN	TLS certificate errors will be ignored for this session
+1627914955573	Marionette	INFO	Stopped listening on port 56938
+1627914969633	geckodriver	INFO	Listening on 127.0.0.1:57045
+1627914972655	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileKxzJz6"
+*** You are running in headless mode.
+1627914972922	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileKxzJz6\\search.json.mozlz4", (void 0)))
+1627914973893	Marionette	INFO	Listening on port 57058
+1627914974200	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileR3QP4a"
+*** You are running in headless mode.
+1627915279367	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileR3QP4a\\search.json.mozlz4", (void 0)))
+1627915280344	Marionette	INFO	Listening on port 63170
+1627915280626	Marionette	WARN	TLS certificate errors will be ignored for this session
+1627915851202	addons.xpi	ERROR	Failed to download system add-on reset-search-defaults@mozilla.com: Error: Failed downloading via XHR, status: 0, reason: error(resource://gre/modules/addons/ProductAddonChecker.jsm:244:16) JS Stack trace: fail@ProductAddonChecker.jsm:244:16
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilegh5Q2A"
+*** You are running in headless mode.
+1627916601782	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilegh5Q2A\\search.json.mozlz4", (void 0)))
+1627916602732	Marionette	INFO	Listening on port 51518
+1627916603043	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GExiting due to channel error.
+FX1-]: Receive IPC close with reason=AbnormalSExiting due to channel error.
+hu: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilehlUh1B"
+*** You are running in headless mode.
+1627916606482	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilehlUh1B\\search.json.mozlz4", (void 0)))
+1627916607409	Marionette	INFO	Listening on port 51569
+1627916607754	Marionette	WARN	TLS certificate errors will be ignored for this session
+1627916610230	Marionette	INFO	Stopped listening on port 51569
+1627916619144	geckodriver	INFO	Listening on 127.0.0.1:51624
+1627916622217	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileJh1evC"
+*** You are running in headless mode.
+1627916622491	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofileJh1evC\\search.json.mozlz4", (void 0)))
+1627916623465	Marionette	INFO	Listening on port 51639
+1627916623759	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+[GFX1-]: Failed buffer for 0, 2, 1287, 2125
+[GFX1-]: Failed buffer for 0, 2, 1287, 2125
+[GFX1-]: Failed buffer for 0, 2, 1287, 2125
+[GFX1-]: Failed buffer for 0, 2, 1287, 2125
+[GFX1-]: Failed buffer for 0, 2, 1287, 2125
+[GFX1-]: Failed buffer for 0, 2, 1287, 2125
+[GFX1-]: Failed buffer for 0, 0, 1349, 2231
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1627916996115	geckodriver	INFO	Listening on 127.0.0.1:63850
+1627916999134	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofile0kwIBO"
+*** You are running in headless mode.
+1627916999440	Marionette	INFO	Marionette enabled
+console.wa1627917002410	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Sharl\\AppData\\Local\\Temp\\rust_mozprofilen9Q0bP"
+*** You are running in headless mode.
+1627917002680	Marionette	INFO	Marionette enabled
+console.warn: SearchSettingsconsole.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+Exiting due to channel error.
+Exiting due to channel error.
+tte	INFO	Listening on port 63910
+1627917003952	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://static.pornhat.com/static/js/main.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No console.log: WebExtensions: reset-d[GFX1-]: Failed buffer for 0, 0, 1349, 2108
+[GFX1-]: Failed buffer for 0, 0, 1349, 2253
+[GFX1-]: Failed buffer fExiting due to channel error.
+Exiting due to channel error.
+53
+[GFX1-]: Failed buffer for 0, 0, 1349, 2253
+[GFX1-]: Failed buffer for 0, 2, 1287, 2126
+[GFX1-]: Failed buffer for 0, 2, 1287, 2126
+[GFX1-]: Failed buffer for 0, 2, 1287, 2126
+[GFX1-]: Failed buffer for 1, 2, 1286, 1795
+[GFX1-]: Failed buffer for 0, 0, 1349, 2108
+[GFX1-]: Failed buffer for 0, 0, 1349, 2231
+[GFX1-]: Failed buffer for 0, 799, 707, 707
+[GFX1-]: Failed buffer for 0, 799, 707, 707
+JavaScript error: , line 0: DataCloneError: The object could not be cloned.
