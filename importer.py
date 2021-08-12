@@ -219,5 +219,5 @@ sp = scraper()
 loop = asyncio.get_event_loop()
 loop.run_until_complete(sp.import_videos())
 
-threading.Timer(2.0, sp.import_videos).start()
-threading.Timer(2.0, sp.is_posted_before).start()
+# threading.Timer(2.0, sp.import_videos).start()
+# threading.Timer(2.0, sp.is_posted_before).start()
